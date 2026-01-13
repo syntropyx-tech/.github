@@ -1,0 +1,47 @@
+name: "Spike"
+description: Research or investigation task
+labels: ["spike"]
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: One-line description
+      placeholder: "Evaluate auth library options"
+    validations:
+      required: true
+  - type: dropdown
+    id: domain
+    attributes:
+      label: Domain
+      description: Which area does this relate to?
+      options:
+        - None
+        - API
+        - DevOps
+        - UI
+    validations:
+      required: false
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+      description: What are we trying to learn or decide?
+    validations:
+      required: true
+  - type: textarea
+    id: deliverable
+    attributes:
+      label: Deliverable
+      description: What output is expected from this spike?
+      placeholder: "Document with findings and recommendation"
+    validations:
+      required: true
+  - type: input
+    id: timebox
+    attributes:
+      label: Timebox
+      description: How long should this take?
+      placeholder: "2 hours / 1 day"
+    validations:
+      required: false

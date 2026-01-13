@@ -1,0 +1,38 @@
+name: "Refactor"
+description: Code improvement without changing behavior
+labels: ["refactor"]
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: One-line description
+      placeholder: "Extract auth logic into separate module"
+    validations:
+      required: true
+  - type: dropdown
+    id: domain
+    attributes:
+      label: Domain
+      description: Which area does this affect?
+      options:
+        - None
+        - API
+        - DevOps
+        - UI
+    validations:
+      required: false
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What code needs refactoring and why?
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: Which files or components are affected?
+    validations:
+      required: false

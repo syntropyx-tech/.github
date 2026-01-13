@@ -1,0 +1,64 @@
+name: "Bug: UI"
+description: Report a UI bug or visual issue
+labels: ["bug", "ui"]
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: One-line description
+      placeholder: "Button not clickable on mobile"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: How can we reproduce this?
+      placeholder: |
+        1. Navigate to page
+        2. Click button
+        3. Observe issue
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What should happen?
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What happens instead?
+    validations:
+      required: true
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot
+      description: Attach a screenshot showing the issue (required if visual bug)
+      placeholder: "Drag and drop image here"
+    validations:
+      required: false
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Browser
+      options:
+        - Chrome
+        - Firefox
+        - Safari
+        - Edge
+        - Other
+    validations:
+      required: false
+  - type: input
+    id: device
+    attributes:
+      label: Device / Viewport
+      placeholder: "Desktop / Mobile / Tablet / 1920x1080"
+    validations:
+      required: false

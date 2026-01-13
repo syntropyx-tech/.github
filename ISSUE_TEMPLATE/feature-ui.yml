@@ -1,0 +1,37 @@
+name: "Feature: UI"
+description: Request a new UI feature or component
+labels: ["feature", "ui"]
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: One-line description
+      placeholder: "Add dark mode toggle"
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What should this feature do?
+    validations:
+      required: true
+  - type: textarea
+    id: design
+    attributes:
+      label: Design / Mockup
+      description: Attach screenshot, Figma link, or describe the expected UI
+      placeholder: "Attach image or paste link"
+    validations:
+      required: false
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: How do we know this is done?
+      placeholder: |
+        - [ ] Component renders correctly
+        - [ ] Responsive on mobile
+    validations:
+      required: false

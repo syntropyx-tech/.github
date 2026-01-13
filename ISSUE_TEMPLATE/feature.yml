@@ -1,0 +1,39 @@
+name: "Feature"
+description: Request a new feature (API or DevOps)
+labels: ["feature"]
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: One-line description
+      placeholder: "Add endpoint for X"
+    validations:
+      required: true
+  - type: dropdown
+    id: domain
+    attributes:
+      label: Domain
+      description: Which area does this affect?
+      options:
+        - API
+        - DevOps
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What should this feature do?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: How do we know this is done?
+      placeholder: |
+        - [ ] Endpoint returns expected response
+        - [ ] Tests pass
+    validations:
+      required: false

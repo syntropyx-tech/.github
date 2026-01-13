@@ -1,0 +1,31 @@
+name: "Chore"
+description: Maintenance task, dependency update, or cleanup
+labels: ["chore"]
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: One-line description
+      placeholder: "Update dependencies"
+    validations:
+      required: true
+  - type: dropdown
+    id: domain
+    attributes:
+      label: Domain
+      description: Which area does this affect?
+      options:
+        - None
+        - API
+        - DevOps
+        - UI
+    validations:
+      required: false
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What needs to be done?
+    validations:
+      required: true
