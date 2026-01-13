@@ -1,0 +1,39 @@
+## Reference for expected label types in primary development repositories
+
+# Issue types
+- name: bug
+  color: "d73a4a"
+  description: Something isn't working
+
+- name: feature
+  color: "a2eeef"
+  description: New feature request
+
+- name: chore
+  color: "fef2c0"
+  description: Maintenance task
+
+- name: spike
+  color: "d4c5f9"
+  description: Research or investigation
+
+- name: refactor
+  color: "fbca04"
+  description: Code improvement
+
+# Domains
+- name: admin
+  color: "5319e7"
+  description: Administrative tasks
+
+- name: api
+  color: "0052cc"
+  description: API related
+
+- name: devops
+  color: "f9a825"
+  description: Infrastructure or CI/CD
+
+- name: ui
+  color: "e91e63"
+  description: User interface

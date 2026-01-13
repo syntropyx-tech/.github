@@ -4,13 +4,32 @@ Organization-wide GitHub configuration for syntropyx-tech.
 
 ## Contents
 
-- `ISSUE_TEMPLATE/` - Issue templates (feature, bug, chore, spike, refactor)
+- `.github/ISSUE_TEMPLATE/` - Issue templates (feature, bug, chore, spike, refactor)
+- `.github/labels.yml` - Label definitions (reference)
+- `.github/workflows/issue-automation.yml` - Reusable workflow for domain labeling
 - `PULL_REQUEST_TEMPLATE.md` - Default PR template
 - `CONTRIBUTING.md` - Contribution guidelines
 - `SECURITY.md` - Security policy
-- `workflows/` - GitHub Actions workflows
+- `setup-labels.sh` - Script to create labels in a repo
 
-## TODO
+## New Repo Setup
 
-- [ ] **Org-wide PAT secret** - Owner needs to create `ORG_PROJECT_PAT` org secret with `repo` and `project` scopes. See issue for setup steps.
-- [ ] **Auto-labeler workflow** - After org PAT is configured, add workflow to auto-apply domain labels (api/devops/ui) based on issue form dropdown selection.
+### Labels
+
+```bash
+./setup-labels.sh syntropyx-tech/<repo-name>
+```
+
+### Issue Automation
+
+Copy this workflow to the repo at `.github/workflows/issue-automation.yml`:
+
+```yaml
+name: Issue automation
+on:
+  issues:
+    types: [opened]
+jobs:
+  automate:
+    uses: syntropyx-tech/.github/.github/workflows/issue-automation.yml@main
+```
