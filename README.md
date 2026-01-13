@@ -22,14 +22,4 @@ Organization-wide GitHub configuration for syntropyx-tech.
 
 ### Issue Automation
 
-Copy this workflow to the repo at `.github/workflows/issue-automation.yml`:
-
-```yaml
-name: Issue automation
-on:
-  issues:
-    types: [opened]
-jobs:
-  automate:
-    uses: syntropyx-tech/.github/.github/workflows/issue-automation.yml@main
-```
+Copy [`.github/workflows/issue-automation-caller.yml`](.github/workflows/issue-automation-caller.yml) to the repo at `.github/workflows/`.

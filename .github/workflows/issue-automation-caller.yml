@@ -1,0 +1,7 @@
+name: Issue automation
+on:
+  issues:
+    types: [opened]
+jobs:
+  automate:
+    uses: syntropyx-tech/.github/.github/workflows/issue-automation.yml@main
