@@ -16,12 +16,11 @@ body:
       label: Domain
       description: Which area does this affect?
       options:
-        - None
         - API
         - DevOps
         - UI
     validations:
-      required: false
+      required: true
   - type: textarea
     id: description
     attributes:
