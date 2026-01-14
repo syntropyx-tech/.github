@@ -2,6 +2,10 @@ name: "Spike"
 description: Research or investigation task
 labels: ["spike"]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        > **Note:** Do not manually add labels or select an issue type. Automation will handle this.
   - type: input
     id: summary
     attributes:

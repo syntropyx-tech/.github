@@ -2,6 +2,10 @@ name: "Feature: UI"
 description: Request a new UI feature or component
 labels: ["feature", "ui"]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        > **Note:** Do not manually add labels or select an issue type. Automation will handle this.
   - type: input
     id: summary
     attributes:

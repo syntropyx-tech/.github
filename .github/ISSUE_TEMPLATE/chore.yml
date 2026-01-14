@@ -2,6 +2,10 @@ name: "Chore"
 description: Maintenance task, dependency update, or cleanup
 labels: ["chore"]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        > **Note:** Do not manually add labels or select an issue type. Automation will handle this.
   - type: input
     id: summary
     attributes:

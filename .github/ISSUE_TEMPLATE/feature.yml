@@ -2,6 +2,10 @@ name: "Feature"
 description: Request a new feature (API or DevOps)
 labels: ["feature"]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        > **Note:** Do not manually add labels or select an issue type. Automation will handle this.
   - type: input
     id: summary
     attributes:
