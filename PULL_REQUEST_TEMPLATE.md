@@ -1,14 +1,20 @@
+< -- DELETE BELOW THIS LINE -- >
+
 # READ, THEN DELETE THIS SECTION
 
 Please fill out each section accordingly.
 
-Additionally please do the following
+Additionally please do the following:
 
-##### Prefix Title With One Of:
+PREFIX TITLE WITH ONE OF:
 
 - `READY:` - PR is ready for review, tests must be passing, review will be auto rejected without passing tests
 - `WIP:` - PR should be opened as a draft initially, signals review is welcome but not requested
 - `BLOCKED:` - PR is blocked by something, include reasoning in summary. *This is not normally an initial PR state*
+
+Change prefix if needed through the PR lifecycle
+
+< -- DELETE ABOVE THIS LINE -- >
 
 ## Summary
 
