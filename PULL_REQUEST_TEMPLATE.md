@@ -20,7 +20,7 @@ Change prefix if needed through the PR lifecycle
 
 <!-- Brief description of changes -->
 
-## Type of Change
+## Type of Change (Delete all but checked lines, multiple are permitted)
 
 - [ ] Feature
 - [ ] Bug fix
