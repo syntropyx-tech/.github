@@ -24,3 +24,31 @@ jobs:
               });
               console.log(`Added label: ${domain}`);
             }
+
+  set-issue-type:
+    name: Set issue type
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const labels = context.payload.issue.labels.map(l => l.name);
+
+            let issueType = null;
+            if (labels.includes('bug')) {
+              issueType = 'Bug';
+            } else if (labels.includes('feature')) {
+              issueType = 'Feature';
+            } else if (labels.includes('chore') || labels.includes('spike') || labels.includes('refactor')) {
+              issueType = 'Task';
+            }
+
+            if (issueType) {
+              await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                type: issueType
+              });
+              console.log(`Set issue type: ${issueType}`);
+            }
