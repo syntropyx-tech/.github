@@ -128,9 +128,9 @@ else
     echo -e "  List: $LIST_FILE ($REPO_COUNT repos)"
 fi
 
-echo -e "  Labels: $($RUN_LABELS && echo "${GREEN}yes${NC}" || echo "${YELLOW}skip${NC}")"
-echo -e "  Workflow: $($RUN_WORKFLOW && echo "${GREEN}yes${NC}" || echo "${YELLOW}skip${NC}")"
-echo -e "  Tokens: $($RUN_TOKENS && echo "${GREEN}yes${NC}" || echo "${YELLOW}skip${NC}")"
+echo -e "  Labels: $([[ "$RUN_LABELS" == "true" ]] && echo "${GREEN}yes${NC}" || echo "${YELLOW}skip${NC}")"
+echo -e "  Workflow: $([[ "$RUN_WORKFLOW" == "true" ]] && echo "${GREEN}yes${NC}" || echo "${YELLOW}skip${NC}")"
+echo -e "  Tokens: $([[ "$RUN_TOKENS" == "true" ]] && echo "${GREEN}yes${NC}" || echo "${YELLOW}skip${NC}")"
 echo ""
 
 if $RUN_TOKENS; then
