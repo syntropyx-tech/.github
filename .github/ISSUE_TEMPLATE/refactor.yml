@@ -65,3 +65,7 @@ body:
         - Blocked
     validations:
       required: false
+  - type: markdown
+    attributes:
+      value: |
+        > **BE AWARE:** Please allow automation to complete (~2mins) before editing ticket again to avoid issues.
