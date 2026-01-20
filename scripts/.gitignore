@@ -1,2 +1,5 @@
 # Ignore cloned repositories used for workflow migration
 repo_workflow_migration/
+
+# Local environment file with secrets
+.env

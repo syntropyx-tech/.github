@@ -23,6 +23,27 @@ test_mode_banner() {
     echo ""
 }
 
+# Check if a repo has a specific secret
+repo_has_secret() {
+    local repo="$1"
+    local secret="${2:-REPO_PROJECTS_PAT}"
+    gh secret list --repo "${ORG}/${repo}" 2>/dev/null | grep -q "^${secret}" && return 0 || return 1
+}
+
+# Check repos for missing REPO_PROJECTS_PAT, returns space-separated list
+get_repos_missing_token() {
+    local -n repos_ref=$1
+    local missing=()
+    for repo in "${repos_ref[@]}"; do
+        # Strip org prefix if present
+        local repo_name="${repo##*/}"
+        if ! repo_has_secret "$repo_name" "REPO_PROJECTS_PAT"; then
+            missing+=("$repo_name")
+        fi
+    done
+    echo "${missing[*]}"
+}
+
 # Confirm prompt (Y/N)
 confirm() {
     echo ""

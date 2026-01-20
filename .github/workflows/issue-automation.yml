@@ -3,8 +3,6 @@ name: Issue automation
 on:
   workflow_call:
     secrets:
-      PROJECTS_PAT:
-        required: false
       REPO_PROJECTS_PAT:
         required: false
 
@@ -66,7 +64,7 @@ jobs:
     name: Add to project board
     runs-on: ubuntu-latest
     env:
-      GH_TOKEN: ${{ secrets.PROJECTS_PAT || secrets.REPO_PROJECTS_PAT }}
+      GH_TOKEN: ${{ secrets.REPO_PROJECTS_PAT }}
       PROJECT_NUMBER: 1
       ORG: syntropyx-tech
       # Field IDs (from project configuration)
@@ -76,7 +74,7 @@ jobs:
       - name: Check for token
         run: |
           if [ -z "$GH_TOKEN" ]; then
-            echo "::error::Missing PROJECTS_PAT or REPO_PROJECTS_PAT secret"
+            echo "::error::Missing REPO_PROJECTS_PAT secret"
             exit 1
           fi
 
