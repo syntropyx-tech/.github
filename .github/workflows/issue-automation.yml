@@ -177,7 +177,7 @@ jobs:
             // Remove Domain, Priority, Status sections
             body = body.replace(/### Domain\s*\n\s*(Admin|API|DevOps|UI|Quant|Smart Contracts)\s*\n*/gi, '');
             body = body.replace(/### Priority\s*\n\s*(Critical|High|Medium|Low)\s*\n*/gi, '');
-            body = body.replace(/### Status\s*\n\s*(Backlog|Icebox|In Progress|Blocked)?\s*\n*/gi, '');
+            body = body.replace(/### Status\s*\n\s*(Backlog|Icebox|In Progress|Blocked|None)?\s*\n*/gi, '');
 
             // Clean up extra newlines
             body = body.replace(/\n{3,}/g, '\n\n').trim();
