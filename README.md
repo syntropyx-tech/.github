@@ -14,6 +14,8 @@ Organization-wide GitHub configuration for syntropyx-tech.
 
 ## New Repo Setup
 
+You can do this manually following steps below or update `scripts/repo_list.txt` and run `scripts/update_repos.sh`
+
 ### Labels
 
 ```bash

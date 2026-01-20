@@ -1,0 +1,11 @@
+# Repository list for label and workflow automation scripts
+# One repository name per line (without org prefix)
+# Lines starting with # are ignored
+
+infrastructure
+syntropyx
+synx-alpha
+synx-contracts
+synx-riskengine
+synx-scenario-dashboard
+synx-ui

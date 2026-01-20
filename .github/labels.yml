@@ -37,3 +37,11 @@
 - name: ui
   color: "e91e63"
   description: User interface
+
+- name: quant
+  color: "17a2b8"
+  description: Quantitative analysis or data
+
+- name: contracts
+  color: "6f42c1"
+  description: Smart contracts

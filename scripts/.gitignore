@@ -1,0 +1,2 @@
+# Ignore cloned repositories used for workflow migration
+repo_workflow_migration/

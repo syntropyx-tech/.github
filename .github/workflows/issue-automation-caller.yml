@@ -7,3 +7,6 @@ permissions:
 jobs:
   automate:
     uses: syntropyx-tech/.github/.github/workflows/issue-automation.yml@main
+    secrets:
+      PROJECTS_PAT: ${{ secrets.PROJECTS_PAT }}
+      REPO_PROJECTS_PAT: ${{ secrets.REPO_PROJECTS_PAT }}
