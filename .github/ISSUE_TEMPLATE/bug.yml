@@ -14,42 +14,6 @@ body:
       placeholder: "Endpoint X returns 500"
     validations:
       required: true
-  - type: dropdown
-    id: domain
-    attributes:
-      label: Domain
-      description: Which area does this affect?
-      options:
-        - API
-        - DevOps
-        - Quant
-        - Smart Contracts
-    validations:
-      required: true
-  - type: dropdown
-    id: priority
-    attributes:
-      label: Priority
-      description: How urgent is this?
-      options:
-        - Medium
-        - Low
-        - High
-        - Critical
-    validations:
-      required: true
-  - type: dropdown
-    id: status
-    attributes:
-      label: Status
-      description: Initial status (defaults to Backlog if not selected)
-      options:
-        - Backlog
-        - Icebox
-        - In Progress
-        - Blocked
-    validations:
-      required: false
   - type: textarea
     id: steps
     attributes:
@@ -88,5 +52,41 @@ body:
       label: Environment
       description: Where does this occur?
       placeholder: "staging / production / local"
+    validations:
+      required: false
+  - type: dropdown
+    id: domain
+    attributes:
+      label: Domain
+      description: Which area does this affect?
+      options:
+        - API
+        - DevOps
+        - Quant
+        - Smart Contracts
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How urgent is this?
+      options:
+        - Medium
+        - Low
+        - High
+        - Critical
+    validations:
+      required: true
+  - type: dropdown
+    id: status
+    attributes:
+      label: Status
+      description: Initial status (defaults to Backlog if not selected)
+      options:
+        - Backlog
+        - Icebox
+        - In Progress
+        - Blocked
     validations:
       required: false

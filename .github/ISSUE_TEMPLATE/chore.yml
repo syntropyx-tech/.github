@@ -14,6 +14,13 @@ body:
       placeholder: "Update dependencies"
     validations:
       required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What needs to be done?
+    validations:
+      required: true
   - type: dropdown
     id: domain
     attributes:
@@ -52,10 +59,3 @@ body:
         - Blocked
     validations:
       required: false
-  - type: textarea
-    id: description
-    attributes:
-      label: Description
-      description: What needs to be done?
-    validations:
-      required: true

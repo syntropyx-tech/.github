@@ -14,6 +14,20 @@ body:
       placeholder: "Extract auth logic into separate module"
     validations:
       required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What code needs refactoring and why?
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: Which files or components are affected?
+    validations:
+      required: false
   - type: dropdown
     id: domain
     attributes:
@@ -49,19 +63,5 @@ body:
         - Icebox
         - In Progress
         - Blocked
-    validations:
-      required: false
-  - type: textarea
-    id: description
-    attributes:
-      label: Description
-      description: What code needs refactoring and why?
-    validations:
-      required: true
-  - type: textarea
-    id: scope
-    attributes:
-      label: Scope
-      description: Which files or components are affected?
     validations:
       required: false
