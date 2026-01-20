@@ -34,10 +34,10 @@ body:
       label: Priority
       description: How urgent is this?
       options:
-        - Critical
-        - High
         - Medium
         - Low
+        - High
+        - Critical
     validations:
       required: true
   - type: dropdown
