@@ -1,0 +1,116 @@
+name: "QA/DEMO Issue"
+description: Report an issue found during QA or demo testing
+labels: ["qa_demo"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > **For QA Team:** This template is for reporting issues found during testing or demos.
+        > An engineer will review and create a formal ticket if needed.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: Brief one-line description of the issue
+      placeholder: "Button does not respond on click"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe what you observed
+      placeholder: "Describe the issue in detail..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: How can we reproduce this issue?
+      placeholder: |
+        1. Navigate to...
+        2. Click on...
+        3. Observe...
+    validations:
+      required: false
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected vs Actual
+      description: What did you expect to happen vs what actually happened?
+      placeholder: |
+        Expected: Button opens modal
+        Actual: Nothing happens
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot / Recording
+      description: Attach a screenshot or screen recording if applicable
+      placeholder: "Drag and drop image or video here"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: is_bug
+    attributes:
+      label: Is this a bug?
+      description: Is this a bug, a feature gap, or are you unsure?
+      options:
+        - "Yes - Something is broken"
+        - "No - This is a feature request or improvement"
+        - "Unsure - Needs engineer review"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How urgent is this issue?
+      options:
+        - Low
+        - Medium
+        - High
+        - Critical
+    validations:
+      required: true
+
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Browser
+      description: Which browser were you using?
+      options:
+        - Chrome
+        - Firefox
+        - Safari
+        - Edge
+        - Other
+    validations:
+      required: false
+
+  - type: input
+    id: device
+    attributes:
+      label: Device / Viewport
+      description: What device or screen size?
+      placeholder: "Desktop / Mobile / Tablet / 1920x1080"
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        > **What happens next:** An engineer will review this issue and either:
+        > - Create a formal bug/feature ticket (linked to this issue)
+        > - Request more information
+        > - Close if duplicate or not actionable
