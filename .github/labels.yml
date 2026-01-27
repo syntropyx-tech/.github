@@ -21,6 +21,11 @@
   color: "fbca04"
   description: Code improvement
 
+# Triage
+- name: qa_demo
+  color: "ff9800"
+  description: QA/Demo issue pending triage
+
 # Domains
 - name: admin
   color: "5319e7"

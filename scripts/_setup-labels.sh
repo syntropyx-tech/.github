@@ -10,6 +10,7 @@ declare -A LABELS=(
     ["chore"]="fef2c0|Maintenance task"
     ["spike"]="d4c5f9|Research or investigation"
     ["refactor"]="fbca04|Code improvement"
+    ["qa_demo"]="ff9800|QA/Demo issue pending triage"
     ["admin"]="5319e7|Administrative tasks"
     ["api"]="0052cc|API related"
     ["devops"]="f9a825|Infrastructure or CI/CD"
@@ -69,7 +70,7 @@ dry_run() {
     echo -e "${YELLOW}Repositories (${#repos[@]}):${NC}"
     for repo in "${repos[@]}"; do echo "  - $repo"; done
     echo ""
-    echo -e "${YELLOW}Labels to create/update:${NC} bug, feature, chore, spike, refactor, admin, api, devops, ui, quant, contracts"
+    echo -e "${YELLOW}Labels to create/update:${NC} bug, feature, chore, spike, refactor, qa_demo, admin, api, devops, ui, quant, contracts"
     echo -e "${YELLOW}Labels to remove:${NC} documentation, duplicate, enhancement, etc."
     echo -e "${BLUE}======================================${NC}"
 }
