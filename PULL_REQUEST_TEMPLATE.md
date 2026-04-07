@@ -41,4 +41,5 @@ Change prefix if needed through the PR lifecycle
 - [ ] Tests pass
 - [ ] Self-reviewed
 - [ ] No unrelated changes
+- [ ] Audit logging added (if applicable)
 - ... Other tasks completed
